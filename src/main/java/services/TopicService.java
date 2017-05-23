@@ -14,10 +14,7 @@ public class TopicService {
 
     public List<Topic> getTopics() {
         Topic s = new Topic();
-        s.setId(1);
-        s.setName("First Session");
-        s.setStartDate(new Date());
-        s.setEndDate((new Date()));
+
         List sessions = new ArrayList<Topic>();
         sessions.add(s);
         return sessions;
