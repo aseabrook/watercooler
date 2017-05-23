@@ -1,4 +1,5 @@
 import Controller.TopicsController;
+import dao.SQLLiteDao;
 import org.javalite.activejdbc.Base;
 import services.TopicService;
 import spark.Spark;
@@ -18,7 +19,9 @@ public class Main {
     public static void main(String[] args) {
 
         // link to DB
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/test", "the_user", "the_password");
+        SQLLiteDao dao = new SQLLiteDao();
+        dao.establishConnection();
+
 
         before((req, res) -> {
             logger.info(req.requestMethod() + " " + req.uri());

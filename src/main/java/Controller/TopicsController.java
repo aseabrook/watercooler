@@ -1,9 +1,8 @@
 package Controller;
 
 import services.APIHelper;
-        import services.TopicService;
-
-        import static spark.Spark.*;
+import services.TopicService;
+import static spark.Spark.*;
 
 public class TopicsController {
 
